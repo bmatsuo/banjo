@@ -27,6 +27,10 @@ import (
 
 var DefaultTemplate = template.New("banjo")
 
+func Funcs(funcs template.FuncMap) {
+	DefaultTemplate.Funcs(funcs)
+}
+
 // add a template to DefaultTemplate. if name is non-empty, the template is
 // surrounded in a template definition.
 func Parse(name, raw string) error {
