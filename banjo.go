@@ -31,6 +31,10 @@ func Funcs(funcs template.FuncMap) {
 	DefaultTemplate.Funcs(funcs)
 }
 
+func Delims(left, right string) {
+	DefaultTemplate.Delims(left, right)
+}
+
 // add a template to DefaultTemplate. if name is non-empty, the template is
 // surrounded in a template definition.
 func Parse(name, raw string) error {
